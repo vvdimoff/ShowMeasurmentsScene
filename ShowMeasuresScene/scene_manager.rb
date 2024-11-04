@@ -26,6 +26,9 @@ module ShowMeasuresScene
         # Добавляем размеры к лицевой стороне группы
         DimensionManager.add_dimensions_to_group(group)
   
+        # Добавляем поиск отверстий
+        DimensionManager.find_holes(group)
+  
         # Обновляем сцену для сохранения настроек
         scene.update
         puts "Created or updated scene named '#{scene_name}' for group '#{group.name}'"
